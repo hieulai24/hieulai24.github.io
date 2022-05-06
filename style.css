@@ -5,7 +5,7 @@
 
 .main{
     width: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(1.jpg);
+    background: linear-gradient(to top, rgba(255,127,80,0.5)4%,rgba(138,43,226,0.5)50%), url(1.jpg);
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -79,7 +79,7 @@ ul li a:hover{
     margin-top: 13px;
     color: #fff;
     border-right: none;
-    font-size: 16px;
+    font-size: 15px;
     float: left;
     padding: 10px;
     border-bottom-left-radius: 5px;
