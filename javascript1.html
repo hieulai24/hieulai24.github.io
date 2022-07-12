@@ -3,9 +3,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
-          body {
-    background-image: url('https://gstatic.gvn360.com/2020/07/Gearvn_gundam_-23.jpg');
-  }
+          
             * {
                 box-sizing: border-box;
                 margin: 0;
@@ -21,7 +19,7 @@
                 width: 60rem;
                 height: 30rem;
                 margin: auto;
-                background: transparent linear-gradient(90deg,#CD853F 0%,#CDAF95 100%) 0% 0% no-repeat;
+                background: transparent linear-gradient(90deg,#CD853F 0%,#F4A460 100%) 0% 0% no-repeat;
             }
             .input-data {
                 display: flex;
@@ -60,8 +58,8 @@
                 display: flex;
                 align-items: center;
                 width: 100%;
-                background: transparent linear-gradient(90deg,#CD853F 0%,#CDAF95 100%) 0% 0% no-repeat;
-                
+                background: transparent linear-gradient(90deg, #CD853F 0%, #F4A460 100%) 0% 0% no-repeat;
+                border-radius: 7%;
             }
             .content > * {
                 padding-left: 2em;
@@ -155,19 +153,19 @@
         const form = document.getElementById('user-detail').addEventListener('submit', (e) => {
             e.preventDefault();
             const name = document.getElementById('user-name').value;
-            document.querySelector('.content-name').textContent = Name: ${name};
+            document.querySelector('.content-name').textContent = `Name: ${name}`;
 
             const email = document.getElementById('user-email').value;
-            document.querySelector('.content-email').textContent = Email: ${email};
+            document.querySelector('.content-email').textContent = `Email: ${email}`;
 
             const genders = document.getElementsByName('gender');
             genders.forEach(gender => {
                 if (gender.checked == true) {
-                    document.querySelector('.content-gender').textContent = Gender: ${gender.value};
+                    document.querySelector('.content-gender').textContent = `Gender: ${gender.value}`;
                 };
             });
 const nation = document.getElementById('user-nation').value;
-            document.querySelector('.content-nation').textContent = Nationality: ${nation};
+            document.querySelector('.content-nation').textContent = `Nationality: ${nation}`;
 
             const hobbies = document.getElementsByName('hobby');
             hobbyArray = [];
@@ -176,7 +174,7 @@ const nation = document.getElementById('user-nation').value;
                     hobbyArray.push(hobby.value);
                 };
             });
-            document.querySelector('.content-hobby').textContent = Hobby: ${hobbyArray.join(', ')};
+            document.querySelector('.content-hobby').textContent = `Hobby: ${hobbyArray.join(', ')}`;
         });
     </script>
 </html>
