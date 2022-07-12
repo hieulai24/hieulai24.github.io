@@ -1,34 +1,87 @@
-</head>
-<style>
-  button {
-    background:#FFFDD0;
-      border:none;
-    width:100px;
-    height:25px;
-    border-radius: 9px;
-  }
-  h1{
-    color: red;
-  }
-  body {
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+           body {
     background-image: url('https://wallpaperset.com/w/full/d/9/c/33522.jpg');
   }
  
-  
-  #demo{
-  background:#CD853F;
-  height:250px;
-  width:300px;
-  font-size:100;
-  border-radius: 9px;
-  }
-</style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            section {
+                display: flex;
+                justify-content: center;
+            }
+            .container {
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                align-items: center;
+                width: 40rem;
+                padding: 1em 0;
+                background: #CDAF95;
+            }
+            #demo {
+                display: grid;
+                place-items: center;
+                background: rgb(139, 39, 107);
+                width: 19rem;
+                height: 15rem;
+                margin-top: 1em;
+                margin-bottom: 1em;
+                font-weight: bold;
+                border-radius: 30px;
+            }
+            button {
+                width: 6rem;
+                padding: 1em 1em;
+            }
+        </style>
+    </head>
     <body>
-       <center> <h1>Giới Thiệu Về Mobile Suit Gundam</h1>
-        <p id="demo"></p>
-    <button type="button" onclick="myFunction()">Barbatos</button>     
+        <section>
+            <div class="container">
+                <h1>Bấm vào ô bên dưới</h1>
+                <div id="demo"></div>
+                <div class="button">
+                    <button class="print">bấm</button>
+                    <button class="total">bấm</button>
+                    <button class="total-even">bấm</button>
+                </div>
+            </div>
+        </section>
+        
+    </body>
     <script>
-      function myFunction() { document.getElementById("demo").innerHTML = "Barbatos xuất hiện trong phần phim hậu chiến tranh tai họa với những trận chiến đẫm máu. Sự xuất hiện của Barbatos đã làm thay đổi cục diện cuộc chiến, phá vỡ thế trận một cách tuyệt vời. Là một trong những nhân vật chủ chốt của phim. ";}
+        document.querySelector('.print').addEventListener('click', print);
+        function print() {
+            document.getElementById('demo').innerText = 'Xin Chao';
+        };
+
+
+        document.querySelector('.total').addEventListener('click', total);
+        function total() {
+            let total = 0;
+            for (let i = 1; i <= 10; i++) {
+                total += i;
+            };
+            document.getElementById('demo').innerText = `Tong tu 1-10: ${total}`;
+        };
+
+
+        document.querySelector('.total-even').addEventListener('click', totalEvenNum);
+        function totalEvenNum() {
+            let total = 0;
+            for (let i = 1; i <= 10; i++) {
+                if (i % 2 === 0) {
+                    total += i;
+                };
+            };
+            document.getElementById('demo').innerText = `Tong tu 1-10: ${total}`;
+        };
     </script>
-      </center>
-           </body>
+</html>
