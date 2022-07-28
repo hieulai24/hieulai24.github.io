@@ -319,7 +319,7 @@
     .dropdown button{
         display: none;
     }
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 800px) {
         .icon{
             position: relative;
             left: 50%;
