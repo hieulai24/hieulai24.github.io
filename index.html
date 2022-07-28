@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lại Quốc Hiếu</title>
+    <script src="https://kit.fontawesome.com/16e4825579.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="main">
         <div class="navbar">
@@ -17,17 +23,32 @@
                     <li><a href="https://hieulai24.github.io/hieu0916.html">Ảnh</a></li>
                     <li><a href="https://hieulai24.github.io/video.html">Videos</a></li>
                 </ul>
+                <div class="dropdown-nav dropdown">
+                    <button class="dropbtn" onclick="open_close_dropdown('drop-nav')"><i class="fa-solid fa-bars"></i></button>
+                    <div class="dropdown-content" id="drop-nav">
+                      <a href="https://hieulai24.github.io/hieu0916.html">Ảnh</a>
+                      <a href="https://hieulai24.github.io/video.html">Video</a>                 
+                    </div>
+                </div>
             </div>
 
             <div class="search">
                 <input class="srch" type="search" name="" placeholder="...">
                 <a href="#"> <button class="btn">Tìm Kiếm</button></a>
+                <div class="dropdown-search dropdown">
+                    <button class="dropbtn drop-search" onclick="open_close_dropdown1('drop-sear')"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <div class="dropdown-content" id="drop-sear">
+                        <input type="text" placeholder="Nhập từ khóa">
+                      </div>
+                </div>
             </div>
 
-        </div> 
+        </div>
         <div class="content">
-            <h1>Gundam & <br><span>Evangelion</span>
+            <div class="heading">
+                <h1>Gundam & <br><span>Evangelion</span> </h1>
                 <button class="cn"><a href="https://hieulai24.github.io/web2.html">Tìm Hiểu</a></button>
+            </div>
 
                 <div class="form">
                     <h2>Tài Khoản</h2>
@@ -36,20 +57,52 @@
                     <button class="btnn"><a href="">Đăng Nhập</a></button>
 
                     <p class="link">Không có tài khoản<br>
-                    <a href="#">Đăng ký </a>Tại đây</a></p>
-                
+                        <a href="#">Đăng ký </a>Tại đây</a>
+                    </p>
+
 
                     <div class="icons">
-                        <a href="https://www.facebook.com/"><ion-icon name="logo-facebook"></ion-icon></a>
-                        <a href="https://www.instagram.com/"><ion-icon name="logo-instagram"></ion-icon></a>
-                        <a href="https://twitter.com/"><ion-icon name="logo-twitter"></ion-icon></a>
-                        <a href="https://www.google.gg/?gws_rd=ssl"><ion-icon name="logo-google"></ion-icon></a>
+                        <a href="https://www.facebook.com/">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                        <a href="https://twitter.com/">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </a>
+                        <a href="https://www.google.gg/?gws_rd=ssl">
+                            <ion-icon name="logo-google"></ion-icon>
+                        </a>
 
-                </div>
                     </div>
                 </div>
         </div>
     </div>
+    </div>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script>
+        function open_close_dropdown(id){
+            let drop = document.getElementById(id);
+            if(drop.style.display == 'none'){
+                drop.style.display = 'block';
+            }
+            else{
+                drop.style.display = 'none';
+            }
+            
+        }
+        function open_close_dropdown1(id){
+            let drop = document.getElementById(id);
+            if(drop.style.display == 'none'){
+                drop.style.display = 'block';
+            }
+            else{
+                drop.style.display = 'none';
+            }
+            
+        }
+    </script>
 </body>
+
 </html>
